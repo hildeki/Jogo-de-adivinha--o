@@ -30,3 +30,22 @@ function atualizarUI() {
   document.getElementById('barra').style.width = percentual + '%';
 }
 
+function adicionarChip(palpite) {
+  const lista = document.getElementById('historico-lista');
+  const chip = document.createElement('span');
+  chip.classList.add('chip');
+
+  if (palpite < numeroSecreto) {
+    chip.classList.add('baixo');
+  } else if (palpite > numeroSecreto) {
+    chip.classList.add('alto');
+  } else {
+    chip.style.background = 'rgba(46,204,113,0.2)';
+    chip.style.border = '1px solid #2ecc71';
+    chip.style.color = '#2ecc71';
+  }
+
+  chip.textContent = palpite;
+  lista.appendChild(chip);
+}
+
