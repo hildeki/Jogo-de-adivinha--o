@@ -89,3 +89,16 @@ function adivinhar() {
   atualizarUI();
 }
 
+// Conecta o botão
+document.getElementById('btn-adivinhar').onclick = adivinhar;
+
+// Permite usar o Enter
+document.getElementById('input-palpite').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') adivinhar();
+});
+
+// Botão reiniciar
+document.querySelector('.btn-reiniciar').onclick = iniciarJogo;
+
+// Inicia o jogo ao carregar a página
+iniciarJogo();
