@@ -12,3 +12,10 @@ const TOTAL_TENTATIVAS = 10;
   minimoAtual = 1;
   maximoAtual = 100;
 }
+
+function mostrarMensagem(texto, cor) {
+  const el = document.getElementById('mensagem');
+  el.textContent = texto;
+  el.style.color = cor;
+}
+
