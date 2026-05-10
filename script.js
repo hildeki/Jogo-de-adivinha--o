@@ -19,3 +19,14 @@ function mostrarMensagem(texto, cor) {
   el.style.color = cor;
 }
 
+function atualizarUI() {
+  document.getElementById('tentativas-restantes').textContent =
+    `${tentativasRestantes} tentativa(s) restante(s)`;
+
+  document.getElementById('intervalo').textContent =
+    `Intervalo: ${minimoAtual} – ${maximoAtual}`;
+
+  const percentual = ((TOTAL_TENTATIVAS - tentativasRestantes) / TOTAL_TENTATIVAS) * 100;
+  document.getElementById('barra').style.width = percentual + '%';
+}
+
