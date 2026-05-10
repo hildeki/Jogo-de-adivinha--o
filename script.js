@@ -55,3 +55,37 @@ function encerrarJogo() {
   document.getElementById('btn-adivinhar').disabled = true;
 }
 
+function adivinhar() {
+  if (!jogoAtivo) return;
+
+  const input = document.getElementById('input-palpite');
+  const palpite = parseInt(input.value);
+
+  if (isNaN(palpite) || palpite < 1 || palpite > 100) {
+    mostrarMensagem('⚠️ Digite um número válido entre 1 e 100!', '#f0a500');
+    return;
+  }
+
+  tentativasRestantes--;
+  adicionarChip(palpite);
+
+  if (palpite === numeroSecreto) {
+    const usadas = TOTAL_TENTATIVAS - tentativasRestantes;
+    mostrarMensagem(`🎉 Parabéns! Você acertou em ${usadas} tentativa(s)!`, '#2ecc71');
+    encerrarJogo();
+  } else if (tentativasRestantes === 0) {
+    mostrarMensagem(`😢 Você perdeu! O número era ${numeroSecreto}.`, '#e94560');
+    encerrarJogo();
+  } else if (palpite < numeroSecreto) {
+    minimoAtual = Math.max(minimoAtual, palpite + 1);
+    mostrarMensagem(`📈 Muito baixo! Tente entre ${minimoAtual} e ${maximoAtual}.`, '#3ca0ff');
+  } else {
+    maximoAtual = Math.min(maximoAtual, palpite - 1);
+    mostrarMensagem(`📉 Muito alto! Tente entre ${minimoAtual} e ${maximoAtual}.`, '#ff643c');
+  }
+
+  input.value = '';
+  input.focus();
+  atualizarUI();
+}
+
