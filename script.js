@@ -49,3 +49,9 @@ function adicionarChip(palpite) {
   lista.appendChild(chip);
 }
 
+function encerrarJogo() {
+  jogoAtivo = false;
+  document.getElementById('input-palpite').disabled = true;
+  document.getElementById('btn-adivinhar').disabled = true;
+}
+
