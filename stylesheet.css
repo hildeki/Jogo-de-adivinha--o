@@ -13,3 +13,22 @@ body {
     align-items: center;
     color: #fff;
 }
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #e94560;
+  text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #a8b2d8;
+  max-width: 500px;
+  line-height: 1.6;
+}
