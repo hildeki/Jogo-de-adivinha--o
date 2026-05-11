@@ -128,3 +128,40 @@ button:disabled {
   background: #555;
   cursor: not-allowed;
 }
+
+.historico {
+  margin-top: 10px;
+}
+
+.historico h3 {
+  font-size: 0.85rem;
+  color: #a8b2d8;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.historico-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.historico-lista .chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.chip.alto {
+  background: rgba(255, 100, 60, 0.2);
+  border: 1px solid #ff643c;
+  color: #ff643c;
+}
+
+.chip.baixo {
+  background: rgba(60, 160, 255, 0.2);
+  border: 1px solid #3ca0ff;
+  color: #3ca0ff;
+}
