@@ -44,3 +44,20 @@ header p {
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
+
+.tentativas-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  color: #a8b2d8;
+}
+
+.tentativas-info span {
+  background: rgba(233, 69, 96, 0.2);
+  border: 1px solid #e94560;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #e94560;
+  font-weight: bold;
+}
