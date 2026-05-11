@@ -77,3 +77,54 @@ header p {
   border-radius: 10px;
   transition: width 0.4s ease;
 }
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #e94560;
+}
+
+input[type="number"]::placeholder {
+  color: #a8b2d8;
+}
+
+button {
+  padding: 14px 22px;
+  border-radius: 12px;
+  border: none;
+  background: #e94560;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background: #c73652;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
